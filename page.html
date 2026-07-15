@@ -4,35 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Consultório Odontológico</title>
+
+    <title>Fila de Pacientes</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Consultório Odontológico</h1>
-    </header>
-    <section>
-        <form>
-            <p>Nome:
-                <input type="text" id="inPaciente" required autofocus>
-                <input type="submit" value="Adicionar" >
-                <input type="button" value="Prioridade" id="btPrioridade">
-                <input type="button" value="Atender" id="btAtender">
-            </p>
-        </form>
-        <h2>Em atendimento: <span id="outAtendimento"></span></h2>
-        <h3>Fila de pacientes:</h3>
-        <pre id="outFila"></pre>
+    <div class="painel">
+        <aside class="menu-lateral">
+            <div class="logo">
+                <span>🦷</span>
+                <h1>OdontoCare</h1>
+            </div>
 
-    </section>
-    <footer>
-        <p>Projetado por Suzanna Dias</p>
+            <nav>
+                <a href="#cadastro">Novo paciente</a>
+                <a href="#atendimento">Atendimento</a>
+                <a href="#fila">Fila de espera</a>
+            </nav>
 
-    </footer>
-    
+            <p class="assinatura">Projeto de Suzanna Dias</p>
+        </aside>
+
+        <main class="conteudo">
+            <header class="cabecalho">
+                <div>
+                    <p class="subtitulo">Painel de atendimento</p>
+                    <h2>Consultório Odontológico</h2>
+                </div>
+
+                <div class="status">
+                    <span class="status-ponto"></span>
+                    Sistema ativo
+                </div>
+            </header>
+
+            <section class="card cadastro" id="cadastro">
+                <div class="titulo-card">
+                    <div>
+                        <p class="numero-etapa">01</p>
+                        <h3>Novo paciente</h3>
+                    </div>
+
+                    <span class="icone-card">👤</span>
+                </div>
+
+                <form>
+                    <label for="inPaciente">Nome do paciente</label>
+
+                    <div class="campo-botoes">
+                        <input
+                            type="text"
+                            id="inPaciente"
+                            placeholder="Digite o nome completo"
+                            required
+                            autofocus
+                        >
+
+                        <input type="submit" value="Adicionar">
+
+                        <input
+                            type="button"
+                            value="Prioridade"
+                            id="btPrioridade"
+                            class="botao-prioridade"
+                        >
+                    </div>
+                </form>
+            </section>
+
+            <section class="grid-atendimento">
+                <div class="card atendimento" id="atendimento">
+                    <div class="titulo-card">
+                        <div>
+                            <p class="numero-etapa">02</p>
+                            <h3>Em atendimento</h3>
+                        </div>
+
+                        <span class="icone-card">🩺</span>
+                    </div>
+
+                    <div class="paciente-atual">
+                        <p>Paciente chamado</p>
+                        <span id="outAtendimento">Nenhum paciente</span>
+                    </div>
+
+                    <input
+                        type="button"
+                        value="Atender próximo"
+                        id="btAtender"
+                        class="botao-atender"
+                    >
+                </div>
+
+                <div class="card fila" id="fila">
+                    <div class="titulo-card">
+                        <div>
+                            <p class="numero-etapa">03</p>
+                            <h3>Fila de espera</h3>
+                        </div>
+
+                        <span class="icone-card">📋</span>
+                    </div>
+
+                    <pre id="outFila">Nenhum paciente aguardando.</pre>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>
