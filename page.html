@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consultório Odontológico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Consultório Odontológico</h1>
+    </header>
+    <section>
+        <form>
+            <p>Nome:
+                <input type="text" id="inPaciente" required autofocus>
+                <input type="submit" value="Adicionar" >
+                <input type="button" value="Prioridade" id="btPrioridade">
+                <input type="button" value="Atender" id="btAtender">
+            </p>
+        </form>
+        <h2>Em atendimento: <span id="outAtendimento"></span></h2>
+        <h3>Fila de pacientes:</h3>
+        <pre id="outFila"></pre>
+
+    </section>
+    <footer>
+        <p>Projetado por Suzanna Dias</p>
+
+    </footer>
+    
+</body>
+<script src="script.js"></script>
+
+</html>
